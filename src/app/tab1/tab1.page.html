@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Accueil
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-card class="welcome-card">
+        <img src="/assets/helper.png" alt="" />
+        <!-- <ion-card-header>
+          <ion-card-subtitle>SOS santé</ion-card-subtitle>
+          <ion-card-title>Aider quelqu'un</ion-card-title>
+        </ion-card-header> -->
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-input clearInput placeholder="Numero de carte"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Type de carte</ion-label>
+                  <ion-select value="brown" okText="valider" cancelText="Annuler">
+                    <ion-select-option value="brown">Brown</ion-select-option>
+                    <ion-select-option value="blonde">Blonde</ion-select-option>
+                    <ion-select-option value="black">Black</ion-select-option>
+                    <ion-select-option value="red">Red</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-button expand="full">Rechercher cette personne</ion-button>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+  

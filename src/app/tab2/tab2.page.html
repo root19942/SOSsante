@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Mon Carte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides pager>
+        <ion-slide class="couverture">
+            <ion-grid>
+                <ion-row >
+                      <ion-col size="4" class="contry_header">
+                        Republic <br>du<br> cameroun
+                      </ion-col>
+                      <ion-col size="4">
+                        
+                      </ion-col>
+                      <ion-col size="4" class="contry_header">
+                        Republic <br>of<br> cameroon
+                      </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="block_blod">
+                      <img src="/assets/blod.png" class="blod">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="midle_name">
+                    Carnet de santé<br><span class="midle_subname">SOS santé</span>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12">
+                    <p class="user_name">
+                      User Name
+                    </p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <p class="extrait">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sed 
+                      sunt quis ea ratione soluta et quidem voluptatibus sint 
+                      ad quo iusto in, quod mollitia ipsa similique maxime reiciendis! Veniam.
+                    </p>
+                  </ion-col>
+                </ion-row>
+          </ion-grid>
+        </ion-slide>
+        <ion-slide class="page">
+            <div class="container">
+                <ul>
+                  <li><span></span>
+                    <div>
+                      <div class="title">
+                          <h3><b>Code:</b> AZERTY</h3>
+                          <h4><b>Type de besoin:</b> Tres pressant</h4>
+                          <h4><b>Medecin:</b> Deugoue</h4>
+                      </div>
+                      <div class="info">
+                          <ion-button block outline icon-start (click)="showrapport()"><ion-icon name="document"></ion-icon> Lire Rapport</ion-button>
+                          
+                      </div>
+                      <div class="type">
+                          Date : 22/09/1994
+                      </div>
+                    </div> <span class="number"><span>11:20</span> <span>15:12</span></span>
+                  </li>
+                  <br>
+                  
+                  <li><span></span>
+                    <div>
+                        <div class="title">
+                            <h3><b>Code:</b> QWERTY</h3>
+                            <h4><b>Type de besoin:</b> Urgent</h4>
+                            <h4><b>Medecin:</b> fredy</h4>
+                        </div>
+                        <div class="info">
+                            <ion-button icon-start (click)="showrapport(page[1])"><ion-icon name="document"></ion-icon> Lire Rapport</ion-button>
+                            
+                        </div>
+                        <div class="type">
+                            Date : 25/09/1997
+                        </div>
+                      </div>
+                      <span class="number"><span>12:30</span> <span>15:30</span></span>
+                  </li>
+                </ul> 
+            </div>
+            
+        </ion-slide>
+      </ion-slides>
+</ion-content>

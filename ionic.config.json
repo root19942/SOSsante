@@ -1,0 +1,7 @@
+{
+  "name": "SOSsant",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
