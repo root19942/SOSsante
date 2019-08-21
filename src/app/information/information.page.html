@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons right>
+      <ion-buttons start>
           <ion-button icon-only (click)="annuler()">
               <ion-icon name="close"></ion-icon>
           </ion-button>
@@ -10,5 +10,105 @@
 </ion-header>
 
 <ion-content>
+    <div class="connection-form finish">
+        <ion-icon class="user-icon" name="ios-contact"></ion-icon><br>
+        <ion-label>Information  &nbsp; <ion-icon name="create" classe="modifier_info" color="primary"></ion-icon></ion-label>
+        <form >
+            <ion-list-header>
+                <ion-label>Informations Publique</ion-label>
+              </ion-list-header>
+            <ion-item>
+              <ion-label>Nom :</ion-label>
+              <p>User name</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Prenom :</ion-label>
+                <p>User subname</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Adresse :</ion-label>
+                <p>User adresse</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Groupe sanguin :</ion-label>
+                <p>A/B/AB/O (+,-)</p>
+            </ion-item>
+            <ion-item>
+                <ion-list lines="none">
+                    <ion-list-header>
+                      <ion-label>Contact en cas d'urgence</ion-label>
+                    </ion-list-header>
+                    <ion-item>
+                      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+                      <ion-label>Contact 1</ion-label>
+                    </ion-item>
+                    <ion-item>
+                      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+                      <ion-label>Contact 2</ion-label>
+                    </ion-item>
+                    <ion-item>
+                      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+                      <ion-label>Contact 3</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-item>
+            <ion-list-header>
+                <ion-label>Information prive</ion-label>
+            </ion-list-header>
+            <ion-item>
+                <ion-label>Date naissance:</ion-label>
+                <p>jj/mmm/aaaa</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Lieu naissance :</ion-label>
+                <p>born place</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Profession:</ion-label>
+                <p>User work</p>
+            </ion-item>
+            <ion-button expand="full" (click)="authoriser()"><ion-icon name="eye-off" *ngIf="authorisation"></ion-icon><ion-icon name="eye" *ngIf="!authorisation"></ion-icon>Informations Medicales</ion-button>
+            <ion-list-header *ngIf="authorisation">
+                <ion-label>Informations medicales</ion-label>
+            </ion-list-header>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
+            <ion-item *ngIf="authorisation">
+                <ion-label>Question:</ion-label>
+                <p>reponse</p>
+            </ion-item>
 
+
+         </form>
+      </div>
 </ion-content>

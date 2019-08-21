@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { HelperPage } from '../helper/helper.page';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public modalController:ModalController) {}
+
+  async helper(numero,type) {
+    const modal: HTMLIonModalElement =
+      await this.modalController.create({
+          component: HelperPage,
+          componentProps: {
+            cart_number: numero,
+            cart_type: type
+         }            
+    });
+
+    await modal.present();
+  }
 
 }

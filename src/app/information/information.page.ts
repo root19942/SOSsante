@@ -8,6 +8,8 @@ import { ModalController } from '@ionic/angular';
 })
 export class InformationPage implements OnInit {
 
+  public authorisation : boolean = false;
+
   constructor(public modalCtrl:ModalController) { }
 
   ngOnInit() {
@@ -15,6 +17,9 @@ export class InformationPage implements OnInit {
 
   annuler(){
     this.modalCtrl.dismiss();
+  }
+  authoriser(){
+    this.authorisation = this.authorisation ? false: true;
   }
 
 }

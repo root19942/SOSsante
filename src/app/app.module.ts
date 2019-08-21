@@ -14,6 +14,7 @@ import { InformationPage } from './information/information.page';
 import { TutoPage } from './tuto/tuto.page';
 import { AproposPage } from './apropos/apropos.page';
 import { RapportPage } from './rapport/rapport.page';
+import { HelperPage } from './helper/helper.page';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RapportPage } from './rapport/rapport.page';
     ComptePage,
     TutoPage,
     AproposPage,
-    RapportPage
+    RapportPage,
+    HelperPage
   ],
   entryComponents: [
     AlertPage,
@@ -31,7 +33,8 @@ import { RapportPage } from './rapport/rapport.page';
     ComptePage,
     TutoPage,
     AproposPage,
-    RapportPage
+    RapportPage,
+    HelperPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [

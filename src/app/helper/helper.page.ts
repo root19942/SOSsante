@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-helper',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelperPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalCtrl:ModalController) { }
 
   ngOnInit() {
   }
+
+  fermer(){
+    this.modalCtrl.dismiss();
+  }
+
 
 }
