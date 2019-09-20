@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons right>
+          <ion-button icon-only (click)="annulerSos()">
+              <ion-icon name="close"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card class="welcome-card">
+      <img src="/assets/shapes.svg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>Monsieu</ion-card-subtitle>
+        <ion-card-title>User name</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p></p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Votre SOS !!</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="clock"></ion-icon>
+        <ion-label style="font-size: 5vw;font-weight:bold">Type de besoin :</ion-label>
+        <ion-select (ionChange)="selecteCT($event)" placeholder="Selectioner un Type">
+          <ion-select-option *ngFor="let consultationType of consultationTypes" [value]="consultationType">{{consultationType?.nom}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item (click)="compte()">
+          <ion-icon slot="start" color="medium" name="pin"></ion-icon>
+        <ion-label style="font-size: 5vw;font-weight:bold">Votre Position</ion-label>
+        <ion-select placeholder="Selection une adresse">
+          <ion-select-option value="f">ici</ion-select-option>
+          <ion-select-option value="m">Male</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item text-center>
+          <ion-label style="font-size: 4vw;font-weight:bold"><br><br>Total :{{consultationTypeselected?.prix_matin}} XAF</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button color="success" expand="full" (click)="fermer()">Valider</ion-button>
+    <ion-button color="danger" expand="full" (click)="annulerSos()">Annuler</ion-button>
+</ion-content>
+

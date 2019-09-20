@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons right>
+          <ion-button icon-only (click)="fermer()">
+              <ion-icon name="close"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title>Aider !!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="connection-form finish">
+        <ion-icon class="user-icon" name="ios-contact"></ion-icon><br>
+        <ion-label>Information</ion-label>
+        <form >
+            <ion-item>
+              <ion-label>Nom :</ion-label>
+              <p *ngIf="personne?.nom">{{personne?.nom}}</p>
+              <p *ngIf="! personne?.nom"><b>Pas Inscrit</b></p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Prenom :</ion-label>
+                <p>{{personne?.prenom}}</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Adresse :</ion-label>
+                <p>{{personne?.adresse}}</p>
+            </ion-item>
+            <ion-item>
+                <ion-label>Groupe sanguin :</ion-label>
+                <p>A/B/AB/O (+,-)</p>
+            </ion-item>
+            <ion-item>
+                <ion-list lines="none">
+                    <ion-list-header>
+                      <ion-label>Contact en cas d'urgence</ion-label>
+                    </ion-list-header>
+                    <ion-item>
+                      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+                      <ion-label>{{personne?.urgence[0].numero}}</ion-label>
+                    </ion-item>
+                    <ion-item>
+                      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+                      <ion-label>{{personne?.urgence[1].numero}}</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-item>
+            <ion-button expand="full" (click)="fermer()">Terminer</ion-button>
+         </form>
+      </div>
+
+</ion-content>

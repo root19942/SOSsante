@@ -1,0 +1,25 @@
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+          <form #form="ngForm"  (ngSubmit)="login(form)">
+            <ion-item text-center>
+              <ion-label style="font-size: 7vw;font-weight:bold;">Identifier vous</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >Login</ion-label>
+                <ion-input name="user_login" type="text" placeholder="Login" [(ngModel)]="login_user.user_login"  ngControl="user_login" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Mot de pass</ion-label>
+                <ion-input type="password"  name="user_pass" placeholder="Mot de pass" [(ngModel)]="login_user.user_pass"  ngControl="user_pass" required ></ion-input>
+            </ion-item>
+            <br><br>
+              <ion-button shape="block" expand="full" type="submit" >{{message}}</ion-button>
+          </form>
+        </ion-card-content>
+        <ion-item>
+          <ion-label>Vous n'avez pas de compte SOS sante .</ion-label>
+          <ion-button fill="outline" slot="end" routerLink="/register" routerDirection="forward">Inscription</ion-button>
+        </ion-item>
+      </ion-card>
+</ion-content>

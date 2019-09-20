@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Accueil
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-card class="welcome-card">
+        <img src="/assets/helper.png" alt="" />
+        <!-- <ion-card-header>
+          <ion-card-subtitle>SOS santé</ion-card-subtitle>
+          <ion-card-title>Aider quelqu'un</ion-card-title>
+        </ion-card-header> -->
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-input [(ngModel)]="numero" clearInput placeholder="Numero de carte"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Type de carte</ion-label>
+                  <ion-select value="cni" okText="valider" [(ngModel)]="type" cancelText="Annuler">
+                    <ion-select-option value="cni">CNI</ion-select-option>
+                    <ion-select-option value="Permi">Permi</ion-select-option>
+                    <ion-select-option value="scolaire">Scolaire</ion-select-option>
+                    <ion-select-option value="Autre">Autre</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-button expand="full" *ngIf="numero" (click)="helper(numero,type)">Rechercher cette personne</ion-button>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+  

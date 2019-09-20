@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons right>
+            <ion-button icon-only (click)="annulerSos()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+      <ion-title>Alert En Cours</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-card class="welcome-card">
+        <img src="/assets/shapes.svg" alt="" />
+        <ion-card-header>
+          <ion-card-subtitle>Monsieu</ion-card-subtitle>
+          <ion-card-title>User name</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p></p>
+        </ion-card-content>
+      </ion-card>
+      <ion-list lines="none">
+        <ion-list-header>
+          <h3 style="text-align: center">Faite scaner le code par le medecin.</h3>
+        </ion-list-header>
+        <ion-item text-center>
+          <h1 style="margin-left: 25%">
+              <qrcode [qrdata]="myAngularxQrCode" [size]="192" [level]="'M'"></qrcode>
+          </h1> 
+        </ion-item>
+        <ion-item>
+            <ion-label start>Date :</ion-label>
+            <ion-label end>22/04/2019 22:15</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label start>Type de besoin :</ion-label>
+            <ion-label end>Pressant</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label start>Numero :</ion-label>
+            <ion-label end>694846550</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label start>Temps Restant :</ion-label>
+            <ion-label end>5:30</ion-label>
+        </ion-item>
+
+      </ion-list>
+
+
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+        <ion-button color="danger" expand="full" (click)="fermer()">Supprimer Alerte !</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+  
