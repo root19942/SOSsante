@@ -1,7 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
+<<<<<<< HEAD
       Mon Carnet
+=======
+      Mon Carte
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -34,7 +38,11 @@
                 <ion-row>
                   <ion-col size="12">
                     <p class="user_name">
+<<<<<<< HEAD
                       {{user?.nom +" "+user?.prenom}}
+=======
+                      User Name
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
                     </p>
                   </ion-col>
                 </ion-row>
@@ -49,6 +57,7 @@
                 </ion-row>
           </ion-grid>
         </ion-slide>
+<<<<<<< HEAD
         <ion-slide class=" page question" *ngFor="let page of pages_fiche">
           <ion-grid>
             <ion-col size="3">
@@ -81,16 +90,53 @@
                           <h3><b>Code:</b> {{consultation?.code}}</h3>
                           <h4><b>Type de besoin:</b> {{consultation?.consultationtype?.nom}}</h4>
                           <h4><b>Medecin:</b> {{consultation?.medecin}}</h4>
+=======
+        <ion-slide class="page">
+            <div class="container">
+                <ul>
+                  <li><span></span>
+                    <div>
+                      <div class="title">
+                          <h3><b>Code:</b> AZERTY</h3>
+                          <h4><b>Type de besoin:</b> Tres pressant</h4>
+                          <h4><b>Medecin:</b> Deugoue</h4>
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
                       </div>
                       <div class="info">
                           <ion-button block outline icon-start (click)="showrapport()"><ion-icon name="document"></ion-icon> Lire Rapport</ion-button>
                           
                       </div>
                       <div class="type">
+<<<<<<< HEAD
                           Date : {{consultation?.dateAlert}}
                       </div>
                     </div> <span class="number"><span>11:20</span> <span>15:12</span></span>
                   </li>
+=======
+                          Date : 22/09/1994
+                      </div>
+                    </div> <span class="number"><span>11:20</span> <span>15:12</span></span>
+                  </li>
+                  <br>
+                  
+                  <li><span></span>
+                    <div>
+                        <div class="title">
+                            <h3><b>Code:</b> QWERTY</h3>
+                            <h4><b>Type de besoin:</b> Urgent</h4>
+                            <h4><b>Medecin:</b> fredy</h4>
+                        </div>
+                        <div class="info">
+                            <ion-button icon-start (click)="showrapport(page[1])"><ion-icon name="document"></ion-icon> Lire Rapport</ion-button>
+                            
+                        </div>
+                        <div class="type">
+                            Date : 25/09/1997
+                        </div>
+                      </div>
+                      <span class="number"><span>12:30</span> <span>15:30</span></span>
+                  </li>
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
                 </ul> 
             </div>
             

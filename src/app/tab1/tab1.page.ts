@@ -16,8 +16,13 @@ export class Tab1Page {
       await this.modalController.create({
           component: HelperPage,
           componentProps: {
+<<<<<<< HEAD
             "cart_number": numero,
             "cart_type": type
+=======
+            cart_number: numero,
+            cart_type: type
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
          }            
     });
 

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 import { ConsultationType } from '../models/consultationType.model';
+=======
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 @Component({
   selector: 'app-alert',
@@ -9,6 +12,7 @@ import { ConsultationType } from '../models/consultationType.model';
   styleUrls: ['./alert.page.scss'],
 })
 export class AlertPage implements OnInit {
+<<<<<<< HEAD
 public position : String[];
 public consultationTypes: ConsultationType[] = [new ConsultationType("","","","","","","")];
 private consultationTypeselected = new ConsultationType("","","","","","","");
@@ -27,10 +31,15 @@ private consultationTypeselected = new ConsultationType("","","","","","","");
   selecteCT(e){
     this.consultationTypeselected = <ConsultationType>e.detail.value;
   }
+=======
+
+  constructor(public modalCtrl: ModalController) { }
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
   ngOnInit() {
   }
 
+<<<<<<< HEAD
   async getConsultationType(): Promise<any>{
     return new Promise<any>((resolve,reject) => {
       this.httpclient.get<any>('http://www.sosante.ifcad.info/web/consultation-type/read.php',{}).subscribe(
@@ -75,5 +84,10 @@ private consultationTypeselected = new ConsultationType("","","","","","","");
     //    console.log('Error getting location', error);
     //  });
   }
+=======
+  annulerSos(){
+    this.modalCtrl.dismiss();
+  }
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 }

@@ -15,11 +15,14 @@ import { TutoPage } from './tuto/tuto.page';
 import { AproposPage } from './apropos/apropos.page';
 import { RapportPage } from './rapport/rapport.page';
 import { HelperPage } from './helper/helper.page';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { AlertencourPage } from './alertencour/alertencour.page';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { QRCodeModule } from 'angularx-qrcode';
+=======
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 @NgModule({
   declarations: [
@@ -30,8 +33,12 @@ import { QRCodeModule } from 'angularx-qrcode';
     TutoPage,
     AproposPage,
     RapportPage,
+<<<<<<< HEAD
     HelperPage,
     AlertencourPage
+=======
+    HelperPage
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
   ],
   entryComponents: [
     AlertPage,
@@ -40,6 +47,7 @@ import { QRCodeModule } from 'angularx-qrcode';
     TutoPage,
     AproposPage,
     RapportPage,
+<<<<<<< HEAD
     HelperPage,
     AlertencourPage
   ],
@@ -48,6 +56,14 @@ import { QRCodeModule } from 'angularx-qrcode';
     StatusBar,
     SplashScreen,
     BarcodeScanner ,
+=======
+    HelperPage
+  ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  providers: [
+    StatusBar,
+    SplashScreen,
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

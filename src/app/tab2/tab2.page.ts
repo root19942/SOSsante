@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RapportPage } from '../rapport/rapport.page';
 import { ModalController } from '@ionic/angular';
+<<<<<<< HEAD
 import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
 import { Consultation } from '../models/consultation.model';
@@ -8,12 +9,16 @@ import { ConsultationType } from '../models/consultationType.model';
 import { User } from '../models/user.model';
 import { Question } from '../models/question.model';
 const TOKEN_KEY = 'auth-token';
+=======
+
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+<<<<<<< HEAD
   public user : User;
   public fiche : Question[];
   public consultations : Consultation[];
@@ -80,6 +85,11 @@ export class Tab2Page {
     }
     );
   }
+=======
+
+  constructor(public modalController:ModalController) {}
+
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
   async showrapport(){
       const modal: HTMLIonModalElement =
         await this.modalController.create({

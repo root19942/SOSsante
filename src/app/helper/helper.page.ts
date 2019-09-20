@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController, NavParams } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user.model';
 import { Contact } from '../models/contact.model';
+=======
+import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 @Component({
   selector: 'app-helper',
@@ -10,6 +15,7 @@ import { Contact } from '../models/contact.model';
   styleUrls: ['./helper.page.scss'],
 })
 export class HelperPage implements OnInit {
+<<<<<<< HEAD
   @Input() cart_number: string;
   @Input() cart_type: string;
   public personne : User;
@@ -17,6 +23,10 @@ export class HelperPage implements OnInit {
 
     this.getUser(navParams.get('cart_number'));
    }
+=======
+
+  constructor(public modalCtrl:ModalController) { }
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
   ngOnInit() {
   }
@@ -25,6 +35,7 @@ export class HelperPage implements OnInit {
     this.modalCtrl.dismiss();
   }
 
+<<<<<<< HEAD
   async getUser(cni){
     await this.httpclient.get<any>('http://sosante.ifcad.info/web/user/read_one_by_cni.php',{
             params: {
@@ -40,5 +51,7 @@ export class HelperPage implements OnInit {
         );
     }
 
+=======
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 }

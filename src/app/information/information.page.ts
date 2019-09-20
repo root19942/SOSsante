@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+<<<<<<< HEAD
 import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
 import { Consultation } from '../models/consultation.model';
@@ -7,6 +8,8 @@ import { ConsultationType } from '../models/consultationType.model';
 import { User } from '../models/user.model';
 import { Question } from '../models/question.model';
 const TOKEN_KEY = 'auth-token';
+=======
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 @Component({
   selector: 'app-information',
@@ -16,6 +19,7 @@ const TOKEN_KEY = 'auth-token';
 export class InformationPage implements OnInit {
 
   public authorisation : boolean = false;
+<<<<<<< HEAD
   public user : User;
   public fiche : Question[] = [new Question("",[""],"","")]
   public consultations : Consultation[];
@@ -30,6 +34,10 @@ export class InformationPage implements OnInit {
       }
     })
    }
+=======
+
+  constructor(public modalCtrl:ModalController) { }
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
   ngOnInit() {
   }
@@ -40,6 +48,7 @@ export class InformationPage implements OnInit {
   authoriser(){
     this.authorisation = this.authorisation ? false: true;
   }
+<<<<<<< HEAD
   async getFiche(){
     
     this.httpclient.get<any>(this.user.fiche).subscribe(
@@ -77,5 +86,7 @@ export class InformationPage implements OnInit {
     }
     );
   }
+=======
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
 
 }

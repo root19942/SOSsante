@@ -4,7 +4,11 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
+<<<<<<< HEAD
     path: '',
+=======
+    path: 'tabs',
+>>>>>>> f9c98761773c959bb0d5f1f3a2c5744346a84977
     component: TabsPage,
     children: [
       {
